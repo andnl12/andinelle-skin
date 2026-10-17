@@ -28,6 +28,8 @@ body[data-view="home"] #produk, body[data-view="home"] #kategori, body[data-view
 body[data-view="produk"] #home, body[data-view="produk"] .benefits, body[data-view="produk"] #promo, body[data-view="produk"] #tentang, body[data-view="produk"] #info-toko {display:none!important}
 body[data-view="tentang"] #home, body[data-view="tentang"] .benefits, body[data-view="tentang"] #promo, body[data-view="tentang"] #produk, body[data-view="tentang"] #kategori, body[data-view="tentang"] #cara-pesan, body[data-view="tentang"] #info-toko {display:none!important}
 body[data-view="kontak"] #home, body[data-view="kontak"] .benefits, body[data-view="kontak"] #promo, body[data-view="kontak"] #produk, body[data-view="kontak"] #kategori, body[data-view="kontak"] #cara-pesan, body[data-view="kontak"] #tentang {display:none!important}
+body[data-view="home"] #info-toko, body[data-view="produk"] #info-toko, body[data-view="tentang"] #info-toko {display:none!important}
+body[data-view="kontak"] #info-toko {display:block!important}
 body:not([data-view="produk"]) #searchBox {display:none!important}
 body:not([data-view="produk"]) #cartButton {display:none!important}
 .links a.active {color:var(--rose);font-weight:700}
@@ -282,7 +284,7 @@ body:not([data-view="produk"]) #cartButton {display:none!important}
 <section class="category-section" id="kategori"><div class="container"><div class="head"><div><h2>Kategori Produk</h2><p>Temukan perawatan terbaik untuk kulitmu.</p></div></div><div class="categories">
 <button class="cat" data-filter="cleanser"><span class="emoji">🧴</span><span>Cleanser</span></button><button class="cat" data-filter="essence"><span class="emoji">✧</span><span>Essence</span></button><button class="cat" data-filter="serum"><span class="emoji">💧</span><span>Serum</span></button><button class="cat" data-filter="moisturizer"><span class="emoji">♡</span><span>Day/Night Cream</span></button><button class="cat" data-filter="sunscreen"><span class="emoji">☼</span><span>Sunscreen</span></button><button class="cat" data-filter="paket"><span class="emoji">🎀</span><span>Paket</span></button>
 </div></div></section>
-<section id="promo"><div class="container promo"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgNDUwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBzdG9wLWNvbG9yPSIjZjRkY2U3Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZmZmYWY4Ii8+PC9saW5lYXJHcmFkaWVudD48ZmlsdGVyIGlkPSJzIj48ZmVEcm9wU2hhZG93IGR4PSIwIiBkeT0iMTAiIHN0ZERldmlhdGlvbj0iMTAiIGZsb29kLWNvbG9yPSIjNzU0YjVhIiBmbG9vZC1vcGFjaXR5PSIuMTQiLz48L2ZpbHRlcj48L2RlZnM+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSI0NTAiIGZpbGw9InVybCgjZykiLz48Y2lyY2xlIGN4PSI3NSIgY3k9Ijk1IiByPSIzOCIgZmlsbD0iI2ZmZjdmYiIgb3BhY2l0eT0iLjciLz48Y2lyY2xlIGN4PSIzMzAiIGN5PSIzNTAiIHI9IjU2IiBmaWxsPSIjZjRkY2U3IiBvcGFjaXR5PSIuNyIvPjxnIGZpbHRlcj0idXJsKCNzKSI+PHJlY3QgeD0iMTYwIiB5PSIxMDAiIHdpZHRoPSI4MCIgaGVpZ2h0PSIzMiIgcng9IjciIGZpbGw9IiNiNzVhODUiLz48cmVjdCB4PSIxNzUiIHk9Ijg0IiB3aWR0aD0iNTAiIGhlaWdodD0iMjAiIHJ4PSI1IiBmaWxsPSIjYjc1YTg1Ii8+PHJlY3QgeD0iMTM1IiB5PSIxMzAiIHdpZHRoPSIxMzAiIGhlaWdodD0iMjEwIiByeD0iMjAiIGZpbGw9IiNmZmY3ZmIiIHN0cm9rZT0iI2I3NWE4NSIgc3Ryb2tlLXdpZHRoPSIzIi8+PHJlY3QgeD0iMTQ2IiB5PSIxODUiIHdpZHRoPSIxMDgiIGhlaWdodD0iODIiIHJ4PSI4IiBmaWxsPSIjZjRkY2U3Ii8+PHRleHQgeD0iMjAwIiB5PSIyMTAiIGZvbnQtc2l6ZT0iMTIiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiNiNzVhODUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkFORElORUxMRTwvdGV4dD48dGV4dCB4PSIyMDAiIHk9IjIzMyIgZm9udC1zaXplPSIxMSIgZmlsbD0iI2I3NWE4NSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+U0tJTiBDQVJFPC90ZXh0PjxwYXRoIGQ9Ik0xNzQgMjUwIFEyMDAgMjMwIDIyNiAyNTAiIHN0cm9rZT0iI2I3NWE4NSIgc3Ryb2tlLXdpZHRoPSIyIiBmaWxsPSJub25lIi8+PC9nPjx0ZXh0IHg9IjIwMCIgeT0iNDA1IiBmb250LWZhbWlseT0iQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2I3NWE4NSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+UnV0aW5pdGFzIHBlcmF3YXRhbiBrdWxpdDwvdGV4dD48dGV4dCB4PSIyMDAiIHk9IjQyOCIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiIGxldHRlci1zcGFjaW5nPSIzIiBmaWxsPSIjYjc1YTg1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5TS0lOIENBUkU8L3RleHQ+PC9zdmc+" alt="Rutinitas perawatan kulit"><div class="promo-copy"><div class="eyebrow">Skincare routine</div><h2>Investasi Terbaik<br>untuk Kulitmu</h2><p>Bangun rutinitas perawatan kulit yang sederhana dan konsisten bersama Andinelle Skin.</p><a class="btn" href="#produk">Pilih Skincare →</a></div></div></section>
+<section id="promo"><div class="container promo"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgNDUwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBzdG9wLWNvbG9yPSIjZjRkY2U3Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZmZmYWY4Ii8+PC9saW5lYXJHcmFkaWVudD48ZmlsdGVyIGlkPSJzIj48ZmVEcm9wU2hhZG93IGR4PSIwIiBkeT0iMTAiIHN0ZERldmlhdGlvbj0iMTAiIGZsb29kLWNvbG9yPSIjNzU0YjVhIiBmbG9vZC1vcGFjaXR5PSIuMTQiLz48L2ZpbHRlcj48L2RlZnM+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSI0NTAiIGZpbGw9InVybCgjZykiLz48Y2lyY2xlIGN4PSI3NSIgY3k9Ijk1IiByPSIzOCIgZmlsbD0iI2ZmZjdmYiIgb3BhY2l0eT0iLjciLz48Y2lyY2xlIGN4PSIzMzAiIGN5PSIzNTAiIHI9IjU2IiBmaWxsPSIjZjRkY2U3IiBvcGFjaXR5PSIuNyIvPjxnIGZpbHRlcj0idXJsKCNzKSI+PHJlY3QgeD0iMTYwIiB5PSIxMDAiIHdpZHRoPSI4MCIgaGVpZ2h0PSIzMiIgcng9IjciIGZpbGw9IiNiNzVhODUiLz48cmVjdCB4PSIxNzUiIHk9Ijg0IiB3aWR0aD0iNTAiIGhlaWdodD0iMjAiIHJ4PSI1IiBmaWxsPSIjYjc1YTg1Ii8+PHJlY3QgeD0iMTM1IiB5PSIxMzAiIHdpZHRoPSIxMzAiIGhlaWdodD0iMjEwIiByeD0iMjAiIGZpbGw9IiNmZmY3ZmIiIHN0cm9rZT0iI2I3NWE4NSIgc3Ryb2tlLXdpZHRoPSIzIi8+PHJlY3QgeD0iMTQ2IiB5PSIxODUiIHdpZHRoPSIxMDgiIGhlaWdodD0iODIiIHJ4PSI4IiBmaWxsPSIjZjRkY2U3Ii8+PHRleHQgeD0iMjAwIiB5PSIyMTAiIGZvbnQtc2l6ZT0iMTIiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiNiNzVhODUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkFORElORUxMRTwvdGV4dD48dGV4dCB4PSIyMDAiIHk9IjIzMyIgZm9udC1zaXplPSIxMSIgZmlsbD0iI2I3NWE4NSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+U0tJTiBDQVJFPC90ZXh0PjxwYXRoIGQ9Ik0xNzQgMjUwIFEyMDAgMjMwIDIyNiAyNTAiIHN0cm9rZT0iI2I3NWE4NSIgc3Ryb2tlLXdpZHRoPSIyIiBmaWxsPSJub25lIi8+PC9nPjx0ZXh0IHg9IjIwMCIgeT0iNDA1IiBmb250LWZhbWlseT0iQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2I3NWE4NSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+UnV0aW5pdGFzIHBlcmF3YXRhbiBrdWxpdDwvdGV4dD48dGV4dCB4PSIyMDAiIHk9IjQyOCIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiIGxldHRlci1zcGFjaW5nPSIzIiBmaWxsPSIjYjc1YTg1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5TS0lOIENBUkU8L3RleHQ+PC9zdmc+" alt="Rutinitas perawatan kulit"><div class="promo-copy"><div class="eyebrow">Skincare routine</div><h2>Investasi Terbaik<br>untuk Kulitmu</h2><p>Bangun rutinitas perawatan kulit yang sederhana dan konsisten bersama Andinelle Skin.</p><a class="btn" href="#produk" data-page="produk">Pilih Skincare →</a></div></div></section>
 <section id="tentang"><div class="container about"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgNDUwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBzdG9wLWNvbG9yPSIjZGNlN2RiIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZmZmYWY4Ii8+PC9saW5lYXJHcmFkaWVudD48ZmlsdGVyIGlkPSJzIj48ZmVEcm9wU2hhZG93IGR4PSIwIiBkeT0iMTAiIHN0ZERldmlhdGlvbj0iMTAiIGZsb29kLWNvbG9yPSIjNzU0YjVhIiBmbG9vZC1vcGFjaXR5PSIuMTQiLz48L2ZpbHRlcj48L2RlZnM+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSI0NTAiIGZpbGw9InVybCgjZykiLz48Y2lyY2xlIGN4PSI3NSIgY3k9Ijk1IiByPSIzOCIgZmlsbD0iI2Y4ZmZmOCIgb3BhY2l0eT0iLjciLz48Y2lyY2xlIGN4PSIzMzAiIGN5PSIzNTAiIHI9IjU2IiBmaWxsPSIjZGNlN2RiIiBvcGFjaXR5PSIuNyIvPjxnIGZpbHRlcj0idXJsKCNzKSI+PHJlY3QgeD0iMTIyIiB5PSIxMTUiIHdpZHRoPSIxNTYiIGhlaWdodD0iMzYiIHJ4PSI3IiBmaWxsPSIjNjM4NjZlIi8+PHJlY3QgeD0iMTMyIiB5PSIxNDgiIHdpZHRoPSIxMzYiIGhlaWdodD0iMTUwIiByeD0iMjAiIGZpbGw9IiNmOGZmZjgiIHN0cm9rZT0iIzYzODY2ZSIgc3Ryb2tlLXdpZHRoPSIzIi8+PGVsbGlwc2UgY3g9IjIwMCIgY3k9IjE1MSIgcng9IjY4IiByeT0iMTIiIGZpbGw9IiNkY2U3ZGIiLz48dGV4dCB4PSIyMDAiIHk9IjIxMCIgZm9udC1zaXplPSIxNyIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzYzODY2ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+QU5ESU5FTExFPC90ZXh0Pjx0ZXh0IHg9IjIwMCIgeT0iMjM4IiBmb250LXNpemU9IjEzIiBmaWxsPSIjNjM4NjZlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5TS0lOIENBUkU8L3RleHQ+PHBhdGggZD0iTTE3NSAyNjAgUTIwMCAyNDAgMjI1IDI2MCIgc3Ryb2tlPSIjNjM4NjZlIiBzdHJva2Utd2lkdGg9IjMiIGZpbGw9Im5vbmUiLz48L2c+PHRleHQgeD0iMjAwIiB5PSI0MDUiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjE4IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjNjM4NjZlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5QZXJhd2F0YW4ga3VsaXQ8L3RleHQ+PHRleHQgeD0iMjAwIiB5PSI0MjgiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjExIiBsZXR0ZXItc3BhY2luZz0iMyIgZmlsbD0iIzYzODY2ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+U0tJTiBDQVJFPC90ZXh0Pjwvc3ZnPg==" alt="Perawatan kulit"><div><div class="eyebrow">A little about us</div><h2>Tentang Andinelle Skin</h2><p>Andinelle Skin adalah brand perawatan kulit yang hadir untuk menemani kamu merawat kulit dalam rutinitas sehari-hari. Kami ingin membuat pengalaman memilih skincare terasa lebih mudah, nyaman, dan menyenangkan.</p><p>Setiap orang memiliki kebutuhan kulit yang berbeda. Karena itu, Andinelle Skin menyediakan pilihan produk satuan dan paket perawatan yang dapat kamu pertimbangkan sesuai kebutuhan kulitmu, mulai dari kulit normal, kering, berminyak, kombinasi, hingga kulit yang rentan berjerawat.</p><p>Bagi kami, merawat kulit bukan hanya tentang penampilan, tetapi juga tentang meluangkan waktu untuk diri sendiri dan membangun kebiasaan perawatan yang konsisten. Pilih produk dengan bijak, gunakan sesuai petunjuk, dan kenali bagaimana kulitmu meresponsnya.</p><p>Terima kasih sudah menjadi bagian dari perjalanan Andinelle Skin. Semoga setiap langkah kecil dalam merawat diri membuatmu semakin nyaman dan percaya diri.</p><div class="note">Glow Together<br>with Andinelle ♡</div></div></div></section>
 </main>
 <div id="cartPanel" style="display:none;position:fixed;right:16px;top:88px;z-index:30;width:min(360px,calc(100vw - 32px));max-height:70vh;overflow:auto;background:#fffaf7;border:1px solid #ead8d2;border-radius:14px;box-shadow:0 14px 40px #35272525;padding:18px">
@@ -294,86 +296,140 @@ body:not([data-view="produk"]) #cartButton {display:none!important}
 </div></div>
 
 <script>
-const WHATSAPP_NUMBER = "6287889915815";
-const cart = [];
-const cartCount = document.getElementById("cartCount");
-const cartPanel = document.getElementById("cartPanel");
-const cartItems = document.getElementById("cartItems");
-const searchBox = document.getElementById("searchBox");
-const searchInput = document.getElementById("searchInput");
-const productCards = [...document.querySelectorAll(".gg-card")];
-let activeCategory = "all";
+(() => {
+  const WHATSAPP_NUMBER = "6287889915815";
+  const cart = [];
+  const cartCount = document.getElementById("cartCount");
+  const cartPanel = document.getElementById("cartPanel");
+  const cartItems = document.getElementById("cartItems");
+  const searchBox = document.getElementById("searchBox");
+  const searchInput = document.getElementById("searchInput");
+  const productCards = [...document.querySelectorAll(".gg-card")];
+  let activeCategory = "all";
 
-function renderCart() {
-  cartCount.textContent = cart.reduce((sum, item) => sum + item.qty, 0);
-  if (!cart.length) { cartItems.textContent = "Keranjang kamu masih kosong."; return; }
-  cartItems.innerHTML = cart.map((item, index) => `<div style="display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid #ead8d2;padding:8px 0"><div><strong>${item.name}</strong><br><span>${item.price} · Qty ${item.qty}</span></div><button type="button" data-remove="${index}" style="border:0;background:#f4e3df;border-radius:8px;padding:5px 8px;cursor:pointer">Hapus</button></div>`).join("");
-  cartItems.querySelectorAll("[data-remove]").forEach(button => button.addEventListener("click", () => { cart.splice(Number(button.dataset.remove), 1); renderCart(); }));
-}
-
-document.querySelectorAll(".add-to-cart").forEach(button => {
-  button.addEventListener("click", () => {
-    const name = button.dataset.name;
-    const price = button.dataset.price;
-    const existing = cart.find(item => item.name === name && item.price === price);
-    if (existing) existing.qty += 1;
-    else cart.push({ name, price, qty: 1 });
-    renderCart();
-    cartPanel.style.display = "block";
-    const original = button.textContent;
-    button.textContent = "✓ Ditambahkan";
-    setTimeout(() => button.textContent = original, 1000);
-  });
-});
-
-document.getElementById("cartButton").addEventListener("click", () => { cartPanel.style.display = cartPanel.style.display === "block" ? "none" : "block"; renderCart(); });
-document.getElementById("closeCart").addEventListener("click", () => cartPanel.style.display = "none");
-document.getElementById("checkoutButton").addEventListener("click", () => {
-  if (!cart.length) { alert("Keranjang masih kosong. Tambahkan produk terlebih dahulu, ya."); return; }
-  const lines = cart.map(item => `- ${item.name} (${item.price}) x${item.qty}`);
-  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Halo Andinelle Skin, saya ingin memesan:\n" + lines.join("\n") + "\nMohon info total dan ongkirnya.")}`, "_blank");
-});
-
-document.getElementById("searchToggle").addEventListener("click", () => { searchBox.classList.toggle("show"); if (searchBox.classList.contains("show")) searchInput.focus(); });
-function filterProducts(term = "") {
-  const query = term.toLowerCase().trim();
-  let visible = 0;
-  productCards.forEach(card => {
-    const categories = (card.dataset.category || "").split(/\s+/);
-    const text = ((card.dataset.name || "") + " " + card.innerText).toLowerCase();
-    const categoryMatch = activeCategory === "all" || categories.includes(activeCategory) || (activeCategory === "moisturizer" && categories.includes("moisturizer"));
-    const queryMatch = !query || text.includes(query);
-    const show = categoryMatch && queryMatch;
-    card.style.display = show ? "" : "none";
-    if (show) visible++;
-  });
-  let empty = document.getElementById("gg-empty");
-  if (!empty) { empty = document.createElement("p"); empty.id = "gg-empty"; empty.className = "gg-note"; empty.textContent = "Produk tidak ditemukan."; document.querySelector(".gloglowing-catalog").appendChild(empty); }
-  empty.style.display = visible ? "none" : "block";
-}
-searchInput.addEventListener("input", () => { activeCategory = "all"; filterProducts(searchInput.value); });
-document.querySelectorAll("[data-filter]").forEach(button => button.addEventListener("click", () => {
-  activeCategory = button.dataset.filter;
-  searchBox.classList.add("show");
-  searchInput.value = "";
-  filterProducts("");
-  document.getElementById("produk").scrollIntoView({ behavior: "smooth" });
-}));
-document.querySelectorAll('a[href^="#"]').forEach(link => link.addEventListener("click", () => { const target = document.querySelector(link.getAttribute("href")); if (target) cartPanel.style.display = "none"; }));
-
-// Navigasi seperti halaman terpisah, tetap memakai satu file index.html
-document.querySelectorAll('[data-page]').forEach(link => {
-  link.addEventListener('click', event => {
-    event.preventDefault();
-    const page = link.dataset.page;
+  function setPage(page, updateHash = true) {
+    const allowed = ["home", "produk", "tentang", "kontak"];
+    if (!allowed.includes(page)) page = "home";
     document.body.dataset.view = page;
-    document.querySelectorAll('.links [data-page]').forEach(item => item.classList.toggle('active', item.dataset.page === page));
-    if (page !== 'produk') { cartPanel.style.display = 'none'; }
-    if (page === 'produk') { searchBox.classList.add('show'); }
-    window.scrollTo({top: 0, behavior: 'smooth'});
+    document.querySelectorAll('.links [data-page]').forEach(link => {
+      link.classList.toggle('active', link.dataset.page === page);
+      if (link.dataset.page === page) link.setAttribute('aria-current', 'page');
+      else link.removeAttribute('aria-current');
+    });
+    cartPanel.style.display = "none";
+    if (page === "produk") {
+      searchBox.classList.add("show");
+    } else {
+      searchBox.classList.remove("show");
+    }
+    if (updateHash) {
+      const hash = page === "home" ? "#home" : page === "produk" ? "#produk" : page === "tentang" ? "#tentang" : "#kontak";
+      if (window.location.hash !== hash) history.pushState({page}, "", hash);
+    }
+    window.scrollTo({top: 0, behavior: "smooth"});
+  }
+
+  function renderCart() {
+    cartCount.textContent = cart.reduce((sum, item) => sum + item.qty, 0);
+    if (!cart.length) {
+      cartItems.textContent = "Keranjang kamu masih kosong.";
+      return;
+    }
+    cartItems.innerHTML = cart.map((item, index) => `
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;border-bottom:1px solid #ead8d2;padding:8px 0">
+        <div><strong>${item.name}</strong><br><span>${item.price} · Qty ${item.qty}</span>
+        <div style="display:flex;gap:6px;margin-top:6px"><button type="button" data-minus="${index}" aria-label="Kurangi jumlah">−</button><button type="button" data-plus="${index}" aria-label="Tambah jumlah">＋</button></div></div>
+        <button type="button" data-remove="${index}" style="border:0;background:#f4e3df;border-radius:8px;padding:5px 8px;cursor:pointer">Hapus</button>
+      </div>`).join("");
+    cartItems.querySelectorAll("[data-remove]").forEach(button => button.addEventListener("click", () => {
+      cart.splice(Number(button.dataset.remove), 1); renderCart();
+    }));
+    cartItems.querySelectorAll("[data-plus]").forEach(button => button.addEventListener("click", () => {
+      cart[Number(button.dataset.plus)].qty += 1; renderCart();
+    }));
+    cartItems.querySelectorAll("[data-minus]").forEach(button => button.addEventListener("click", () => {
+      const index = Number(button.dataset.minus);
+      cart[index].qty -= 1;
+      if (cart[index].qty <= 0) cart.splice(index, 1);
+      renderCart();
+    }));
+  }
+
+  document.querySelectorAll(".add-to-cart").forEach(button => {
+    button.addEventListener("click", () => {
+      const name = button.dataset.name;
+      const price = button.dataset.price;
+      const existing = cart.find(item => item.name === name && item.price === price);
+      if (existing) existing.qty += 1;
+      else cart.push({name, price, qty: 1});
+      renderCart();
+      cartPanel.style.display = "block";
+      const original = button.textContent;
+      button.textContent = "✓ Ditambahkan";
+      window.setTimeout(() => button.textContent = original, 1000);
+    });
   });
-});
-document.querySelectorAll('.links [data-page="home"]').forEach(link => link.classList.add('active'));
+
+  document.getElementById("cartButton").addEventListener("click", () => {
+    if (document.body.dataset.view !== "produk") setPage("produk");
+    cartPanel.style.display = cartPanel.style.display === "block" ? "none" : "block";
+    renderCart();
+  });
+  document.getElementById("closeCart").addEventListener("click", () => cartPanel.style.display = "none");
+  document.getElementById("checkoutButton").addEventListener("click", () => {
+    if (!cart.length) { alert("Keranjang masih kosong. Tambahkan produk terlebih dahulu, ya."); return; }
+    const lines = cart.map(item => `- ${item.name} (${item.price}) x${item.qty}`);
+    const message = "Halo Andinelle Skin, saya ingin memesan:\n" + lines.join("\n") + "\nMohon konfirmasi total harga dan ongkirnya.";
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
+  });
+
+  document.getElementById("searchToggle").addEventListener("click", () => {
+    if (document.body.dataset.view !== "produk") setPage("produk");
+    searchBox.classList.add("show");
+    searchInput.focus();
+  });
+
+  function filterProducts(term = "") {
+    const query = term.toLowerCase().trim();
+    let visible = 0;
+    productCards.forEach(card => {
+      const categories = (card.dataset.category || "").split(/\s+/);
+      const text = ((card.dataset.name || "") + " " + card.innerText).toLowerCase();
+      const categoryMatch = activeCategory === "all" || categories.includes(activeCategory) || (activeCategory === "paket" && categories.includes("acne"));
+      const queryMatch = !query || text.includes(query);
+      const show = categoryMatch && queryMatch;
+      card.style.display = show ? "" : "none";
+      if (show) visible++;
+    });
+    let empty = document.getElementById("gg-empty");
+    if (!empty) {
+      empty = document.createElement("p"); empty.id = "gg-empty"; empty.className = "gg-note";
+      empty.textContent = "Produk tidak ditemukan.";
+      document.querySelector(".gloglowing-catalog").appendChild(empty);
+    }
+    empty.style.display = visible ? "none" : "block";
+  }
+  searchInput.addEventListener("input", () => { activeCategory = "all"; filterProducts(searchInput.value); });
+  document.querySelectorAll("[data-filter]").forEach(button => button.addEventListener("click", () => {
+    setPage("produk");
+    activeCategory = button.dataset.filter;
+    searchInput.value = "";
+    filterProducts("");
+    document.getElementById("produk").scrollIntoView({behavior: "smooth", block: "start"});
+  }));
+
+  document.querySelectorAll("[data-page]").forEach(link => link.addEventListener("click", event => {
+    event.preventDefault(); setPage(link.dataset.page);
+  }));
+  window.addEventListener("popstate", () => {
+    const hash = window.location.hash;
+    setPage(hash === "#produk" ? "produk" : hash === "#tentang" ? "tentang" : hash === "#kontak" ? "kontak" : "home", false);
+  });
+  // Initial view follows the URL hash, so direct links and browser navigation work.
+  const initialHash = window.location.hash;
+  setPage(initialHash === "#produk" ? "produk" : initialHash === "#tentang" ? "tentang" : initialHash === "#kontak" ? "kontak" : "home", false);
+  renderCart();
+})();
 </script>
  
 <section id="info-toko" class="contact-section">
@@ -403,20 +459,22 @@ document.querySelectorAll('.links [data-page="home"]').forEach(link => link.clas
     </a>
 
     <a class="contact-card"
-       href="https://www.tiktok.com/@andiniptr"
+       href="https://www.tiktok.com/@andini5_12"
        target="_blank" rel="noopener noreferrer">
       <span class="contact-icon">♪</span>
       <span class="contact-name">TikTok</span>
-      <span class="contact-detail">@andiniptr</span>
+      <span class="contact-detail">@andini5_12</span>
       <span class="contact-link">See our videos ↗</span>
     </a>
 
-    <div class="contact-card">
+    <a class="contact-card"
+       href="https://wa.me/6287889915815?text=Halo%20Andinelle%20Skin%2C%20saya%20ingin%20bertanya%20tentang%20jam%20pelayanan."
+       target="_blank" rel="noopener noreferrer" aria-label="Tanyakan jam pelayanan melalui WhatsApp">
       <span class="contact-icon">◷</span>
       <span class="contact-name">Jam Pelayanan</span>
       <span class="contact-detail">Setiap hari</span>
-      <span class="contact-link">08.00–20.00 WIB</span>
-    </div>
+      <span class="contact-link">08.00–20.00 WIB · Tanya ↗</span>
+    </a>
 
     <a class="contact-card address-card"
        href="https://www.google.com/maps/search/?api=1&query=Jl.+Lingkar+Ketapang+Banyuwangi"
